@@ -1,0 +1,727 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #0f0f0f;
+    color: #333;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+header nav ul {
+    list-style-type: none;
+}
+
+header nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+
+
+.hero {
+    background-color: #282c34;
+    color: white;
+    padding: 100px 20px;
+    text-align: center;
+    height: 100vh; /* Full viewport height */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center content vertically */
+    align-items: center;
+    background-image: url('BA.avif'); /* Optionally add a background image */
+    background-size: cover;
+    background-position: center;
+}
+
+.hero h1 {
+    font-family: 'Montserrat', sans-serif; /* Bold font for headings */
+    font-weight: 700;
+    font-size: 3rem; /* Larger text for a bold introduction */
+    text-transform: uppercase; /* Uppercase for a bold look */
+    letter-spacing: 2px; /* Increase letter spacing */
+}
+
+.hero p {
+    font-size: 1.5rem;
+    margin-top: 20px;
+}
+
+.hero .cta {
+    background-color: #61dafb;
+    padding: 15px 30px;
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 30px;
+    display: inline-block;
+    border-radius: 50px; /* Rounded button */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Add a shadow */
+    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.hero .cta:hover {
+    background-color: #21a1f1; /* Darker blue on hover */
+    transform: scale(1.05); /* Slight scale effect on hover */
+}
+
+.hero h1 {
+    opacity: 0;
+    transform: translateY(-50px);
+    animation: fadeIn 1.5s ease-out forwards;
+}
+
+.hero p {
+    opacity: 0;
+    transform: translateY(-30px);
+    animation: fadeIn 2s ease-out forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+
+/* Container for Projects */
+
+#projects {
+    padding: 60px 20px;
+    background-color: #f9f9f9;
+    text-align: left;
+    max-width: 1200px; /* Ensure consistent width like About Me */
+    margin: 0 auto; /* Center the section */
+    margin-bottom: 60px; /* Add margin to create space below the section */
+
+    
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    max-width: 1200px; /* Set a max-width to align with the work experience container */
+    margin: 0 auto; /* Center the project grid */
+    padding-left: 20px; /* Add padding to match work experience */
+    padding-right: 20px;
+}
+
+/* Project Item */
+.project-item {
+    background: #ffffff;
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* Project Item Hover Effect */
+.project-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Project Image */
+.project-item img {
+    max-width: 150px; /* Set the maximum width */
+    max-height: 150px; /* Set the maximum height */
+    object-fit: cover; /* Ensures the image doesn't get distorted */
+    border-radius: 10px; /* Keep the rounded corners */
+    margin-bottom: 15px;
+    display: block; /* Ensures the image is treated as a block element */
+    margin-left: auto;
+    margin-right: auto; /* Centers the image horizontally */
+}
+
+
+/* Project Title */
+.project-item h3 {
+    font-size: 1.60rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+/* Project Description */
+.project-item p {
+    font-size: 1.2rem;
+    color: #0f0f0f;
+    margin-bottom: 20px;
+    text-align: justify;
+}
+
+
+
+
+.cta-btn {
+    background-color: #ff6347; /* Button color */
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 1rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    
+}
+
+.cta-btn:hover {
+    background-color: #ff4500; /* Darker color on hover */
+}
+
+/* 10+ Rolling Counter */
+.rolling-counter {
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 30px;
+}
+
+#counter,
+#plus {
+    color: #ff6347; /* Color for "10+" (e.g., orange-red) */
+}
+
+#project {
+    color: #f8f1f1; /* Color for "Projects" (e.g., dark gray) */
+}
+
+
+
+form input, form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+}
+
+form button {
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #61dafb;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: white;
+}
+
+.hero .dynamic-role {
+    font-weight: bold;
+    color: #ff6347; /* Initial bright color for Data Analyst */
+    transition: color 0.3s ease-in-out; /* Smooth transition for color change */
+}
+
+.hero .dynamic-role.data-analyst {
+    color: #ff6347; /* Bright color for Data Analyst */
+}
+
+.hero .dynamic-role.data-engineer {
+    color: #32cd32; /* Bright color for Data Engineer */
+}
+
+.hero .dynamic-role.software-engineer {
+    color: #1e90ff; /* Bright color for Software Engineer */
+}
+
+header nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+header nav ul li {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: #fff; /* Default color */
+    font-weight: bold;
+    transition: color 0.3s ease-in-out; /* Smooth transition for color change */
+}
+
+header nav ul li a:hover {
+    color: #ff6347; /* Color for all links on hover (Tomato) */
+}
+
+/* wrok experience */
+
+#work-experience {
+    padding: 60px 20px;
+    background-color: #f9f9f9;
+    text-align: left;
+    max-width: 1200px; /* Ensure consistent width like About Me */
+    margin: 0 auto; /* Center the section */
+    margin-bottom: 60px; /* Add margin to create space below the section */
+
+}
+
+.timeline {
+    border-left: 2px solid #ff6347;
+    padding-left: 20px;
+    margin-top: 40px;
+    max-width: 100%; /* Ensure it fits inside the container */
+}
+
+.timeline-item {
+    margin-bottom: 30px;
+    background-color: #fff; /* Optional background for each item */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional shadow for a modern look */
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.timeline-item h4 {
+    font-size: 1.5rem; /* Slightly larger font for better readability */
+    margin-bottom: 5px;
+    color: #333; /* Ensure text color is consistent */
+}
+
+.timeline-item span {
+    font-size: 0.9rem;
+    color: #999;
+    display: block; /* Ensure the date spans take up a full line */
+    margin-bottom: 10px;
+}
+
+.timeline-item p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-top: 10px;
+    color: #555; /* Consistent text color */
+}
+
+.timeline-item:hover {
+    transform: translateY(-10px); /* Slightly lift the certification card on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Deeper shadow on hover */
+}
+
+
+/* Certifications section styling */
+
+#certifications {
+    padding: 60px 20px;
+    max-width: 1200px; /* Set the max-width to match the grid */
+    background-color: #ffffff; /* Set background to white */
+    text-align: center;
+    margin: 0 auto; /* Center the certifications section */
+    margin-bottom: 60px; /* Add margin to create space below the section */
+}
+
+.certification-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Flexible grid layout */
+    gap: 20px;
+    padding: 20px;
+    justify-items: center; /* Align items in the center of the grid */
+    align-items: start; /* Ensure consistent vertical alignment */
+    margin: 0 auto; /* Center the grid container */
+    max-width: 100%; /* Match the parent container width */
+}
+
+/* Certification Item */
+.certification-item {
+    text-align: center;
+    position: relative;
+    background-color: #fff; /* Add white background to certification item */
+    border: 2px solid #ddd; /* Add border to each certification */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Hover effect transition */
+    width: 100%;
+    max-width: 250px; /* Adjust to your desired card width */
+}
+
+/* Hover Effect */
+.certification-item:hover {
+    transform: translateY(-10px); /* Slight lift on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Deeper shadow on hover */
+}
+
+/* Certification Image */
+.certification-item img {
+    max-width: 150px;
+    max-height: 150px;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Smooth transition on hover */
+}
+
+/* Image Hover Effect */
+.certification-item img:hover {
+    transform: scale(1.1); /* Enlarge the image slightly on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Add shadow on hover */
+}
+
+/* Certification Text */
+.certification-item p {
+    margin-top: 10px;
+    font-size: 1.2rem;
+    color: #333;
+}
+
+
+
+#about {
+    background-color: #f9f9f9; /* Light background color */
+    padding: 50px 20px; /* Spacing around the text */
+    text-align: left; /* Align the text to the left */
+    border-radius: 10px; /* Add rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
+    max-width: 1200px; /* Control the width */
+    margin: 40px auto; /* Center the section */
+}
+
+#about h2 {
+    font-size: 2.5rem; /* Large heading size */
+    color: #333; /* Darker text for the heading */
+    margin-bottom: 20px; /* Space below the heading */
+    text-transform: uppercase; /* Capitalize heading */
+}
+
+#about p {
+    font-size: 1.2rem; /* Larger text for readability */
+    line-height: 1.8; /* Increase the line height */
+    color: #555; /* Softer color for paragraph text */
+    margin-bottom: 20px; /* Space between paragraphs */
+    text-align: justify;
+}
+
+.about-img {
+    float: left; /* Float the image to the left */
+    margin-right: 20px; /* Add some space between the image and text */
+    width: 150px; /* Control the size of the image */
+    border-radius: 50%; /* Make it circular */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a soft shadow */
+}
+
+#about:hover {
+    transform: translateY(-10px); /* Slightly lift the certification card on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Deeper shadow on hover */
+}
+
+.social-icons {
+    margin-top: 20px;
+}
+
+.social-icons a {
+    margin: 0 10px;
+    color: white;
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #61dafb;
+}
+
+
+#work-experience {
+    padding: 60px 20px;
+    background-color: #f9f9f9;
+    text-align: left;
+}
+
+h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: #333;
+}
+
+.timeline {
+    border-left: 3px solid #ff6347;
+    padding-left: 20px;
+    margin-top: 40px;
+    position: relative;
+}
+
+.timeline-item {
+    background-color: #ffffff; /* Apply background to all work experiences */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px; /* Space between work experiences */
+}
+
+.timeline-item h4 {
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+    color: #333;
+    font-weight: bold;
+}
+
+.timeline-item span {
+    font-size: 0.9rem;
+    color: #777;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.timeline-item p,
+.timeline-item ul {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #555;
+    margin: 0;
+}
+
+.timeline-item ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+
+.timeline-item:nth-child(odd) {
+    background-color: #fdfdfd;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.timeline-item:hover {
+    background-color: #fffbf0;
+    transition: background-color 0.3s ease-in-out;
+}
+
+#work-experience {
+    text-align: justify; /* Align text to both the left and right edges */
+}
+
+
+/* Skills Section */
+#skills {
+    background-color: #f9f9f9;
+    text-align: center;
+    max-width: 1200px;
+    padding: 50px 20px; /* Spacing around the text */
+    border-radius: 10px; /* Add rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
+    margin: 40px auto; /* Center the section */
+}
+
+#skills h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: #333;
+}
+
+/* Grid Layout for Skills */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto; /* Center the grid */
+    padding: 20px;
+}
+
+/* Skill Box Styling */
+.skill-box {
+    background-color: #fff;
+    border: 2px solid #ddd;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover Effect on Skill Box */
+.skill-box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Skill Box Heading */
+.skill-box h3 {
+    font-size: 1.5rem;
+    color: #ff6347; /* Accent color */
+    margin-bottom: 15px;
+}
+
+/* Skill List */
+.skill-box ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.skill-box ul li {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #555;
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+.skill-box ul li strong {
+    color: #333; /* Bold category names */
+}
+
+/* Contact Section */
+#contact {
+    padding: 60px 20px;
+    max-width: 1200px; /* Set the max-width to match the grid */
+    background-color: #ffffff; /* Set background to white */
+    text-align: center;
+    margin: 0 auto; /* Center the certifications section */
+    margin-bottom: 60px; /* Add margin to create space below the section */
+    
+}
+
+/* Add .container class */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Contact form styling */
+#contact-form input, #contact-form textarea {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+#contact-form button {
+    background-color: #ff6347;
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#contact-form button:hover {
+    background-color: #e5533d;
+}
+
+/* Result message styling */
+#form-result {
+    margin-top: 20px;
+    font-size: 1.2rem;
+    color: #333;
+}
+
+/* Resume section */
+.resume-section {
+    margin-top: 30px;
+}
+
+.resume-btn {
+    display: inline-block;
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1.1rem;
+}
+
+.resume-btn:hover {
+    background-color: #555;
+}
+
+@media (max-width: 768px) {
+
+    .nav-list {
+        flex-direction: column; /* Stack nav items vertically on small screens */
+        padding: 0;
+    }
+
+    .nav-list li {
+        margin: 10px 0; /* Add space between nav items */
+    }
+
+    header {
+        padding: 0.5rem 0; /* Reduce header padding for small screens */
+    }
+}
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 1.2rem;
+    }
+
+    .hero {
+        padding: 50px 20px; /* Reduce padding on mobile */
+    }
+
+    .hero .cta {
+        padding: 10px 20px;
+    }
+
+    .timeline {
+            border-left: 2px solid #ff6347;
+            padding-left: 10px;
+        }
+    
+    .timeline-item h4 {
+            font-size: 1.2rem;
+        }
+    
+    .timeline-item p,
+    .timeline-item ul {
+            font-size: 0.9rem;
+        }
+    
+        #contact {
+            padding: 40px 10px; /* Reduce padding for smaller screens */
+            max-width: 100%; /* Allow the form to take full width on mobile */
+            box-shadow: none; /* Optional: Remove shadow for a cleaner mobile view */
+            border-radius: 0; /* Optional: Remove rounded corners on mobile */
+        }
+    
+        form input, form textarea {
+            padding: 12px; /* Reduce padding inside form inputs */
+            font-size: 0.9rem; /* Slightly smaller font size for mobile */
+        }
+    
+        form button {
+            padding: 12px 20px; /* Reduce button padding on mobile */
+            font-size: 0.9rem; /* Slightly smaller button text size */
+        }
+    
+        #contact h2 {
+            font-size: 2rem; /* Smaller heading size on mobile */
+            margin-bottom: 20px; /* Less space below the heading */
+        }
+    
+
