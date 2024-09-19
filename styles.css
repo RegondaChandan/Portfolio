@@ -158,8 +158,9 @@ header nav ul li a {
 
 /* Project Title */
 .project-item h3 {
-    font-size: 1.60rem;
+    font-size: 1.25rem;
     color: #333;
+    text-align: center;
     margin-bottom: 10px;
 }
 
@@ -587,89 +588,99 @@ h2 {
     color: #333; /* Bold category names */
 }
 
-/* Contact Section */
-#contact {
+/* Education Section */
+#education {
     padding: 60px 20px;
-    max-width: 1200px; /* Set the max-width to match the grid */
-    background-color: #ffffff; /* Set background to white */
-    text-align: center;
-    margin: 0 auto; /* Center the certifications section */
+    background-color: #f9f9f9;
+    text-align: left;
+    max-width: 1200px; /* Ensure consistent width like About Me */
+    margin: 0 auto; /* Center the section */
     margin-bottom: 60px; /* Add margin to create space below the section */
-    
+
 }
 
-/* Add .container class */
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
+.timeline {
+    border-left: 2px solid #ff6347;
+    padding-left: 20px;
+    margin-top: 40px;
+    max-width: 100%; /* Ensure it fits inside the container */
 }
 
-/* Contact form styling */
-#contact-form input, #contact-form textarea {
-    width: 100%;
-    padding: 15px;
-    margin-bottom: 20px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
+.timeline-item {
+    margin-bottom: 30px;
+    background-color: #fff; /* Optional background for each item */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional shadow for a modern look */
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.timeline-item h4 {
+    font-size: 1.5rem; /* Slightly larger font for better readability */
+    margin-bottom: 5px;
+    color: #333; /* Ensure text color is consistent */
+}
+
+.timeline-item span {
+    font-size: 0.9rem;
+    color: #999;
+    display: block; /* Ensure the date spans take up a full line */
+    margin-bottom: 10px;
+}
+
+.timeline-item p {
     font-size: 1rem;
+    line-height: 1.6;
+    margin-top: 10px;
+    color: #555; /* Consistent text color */
 }
 
-#contact-form button {
-    background-color: #ff6347;
-    color: white;
-    padding: 15px 30px;
-    border: none;
-    border-radius: 5px;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+.timeline-item:hover {
+    transform: translateY(-10px); /* Slightly lift the certification card on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Deeper shadow on hover */
 }
 
-#contact-form button:hover {
-    background-color: #e5533d;
-}
-
-/* Result message styling */
-#form-result {
-    margin-top: 20px;
-    font-size: 1.2rem;
-    color: #333;
-}
-
-/* Resume section */
+/* Resume Button Styling */
 .resume-section {
-    margin-top: 30px;
+    text-align: center;
+    margin-top: 40px;
 }
 
 .resume-btn {
-    display: inline-block;
-    background-color: #333;
+    background-color: #ff6347;
     color: white;
-    padding: 10px 20px;
+    padding: 15px 30px;
     border-radius: 5px;
     text-decoration: none;
-    font-size: 1.1rem;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
 }
 
 .resume-btn:hover {
-    background-color: #555;
+    background-color: #e5533d;
 }
+
+
+
 
 @media (max-width: 768px) {
 
-    .nav-list {
-        flex-direction: column; /* Stack nav items vertically on small screens */
-        padding: 0;
-    }
 
-    .nav-list li {
-        margin: 10px 0; /* Add space between nav items */
-    }
+#about-me {
+    flex-direction: column;
+    text-align: center;
+    padding: 40px 20px;
+}
 
-    header {
-        padding: 0.5rem 0; /* Reduce header padding for small screens */
-    }
+#about-me img {
+    margin-right: 0;
+    margin-bottom: 20px;
+    width: 150px;
+    height: 150px;
+}
+
+#about-me-content {
+    max-width: 100%;
+    text-align: center;
 }
 
     .hero h1 {
@@ -702,26 +713,6 @@ h2 {
             font-size: 0.9rem;
         }
     
-        #contact {
-            padding: 40px 10px; /* Reduce padding for smaller screens */
-            max-width: 100%; /* Allow the form to take full width on mobile */
-            box-shadow: none; /* Optional: Remove shadow for a cleaner mobile view */
-            border-radius: 0; /* Optional: Remove rounded corners on mobile */
-        }
-    
-        form input, form textarea {
-            padding: 12px; /* Reduce padding inside form inputs */
-            font-size: 0.9rem; /* Slightly smaller font size for mobile */
-        }
-    
-        form button {
-            padding: 12px 20px; /* Reduce button padding on mobile */
-            font-size: 0.9rem; /* Slightly smaller button text size */
-        }
-    
-        #contact h2 {
-            font-size: 2rem; /* Smaller heading size on mobile */
-            margin-bottom: 20px; /* Less space below the heading */
-        }
-    
+       
 
+    }
